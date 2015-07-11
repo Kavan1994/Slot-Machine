@@ -1,0 +1,58 @@
+//Ben Adamsky
+#include <iostream.h>
+#include <lvp\random.h>
+//Custom Randomization Class
+
+int main()
+{
+	randomize();
+	int tokens = 200;
+	int numOne = 1 + random(3);
+	int numTwo = 1 + random(3);
+	int numThree = 1 + random(3);
+	char input;
+
+	cout << "Slot Machine: Type 'Y' or 'y' to play!" << endl;
+		do
+		{
+			cout << "You have " << tokens << " tokens. Pull? ";
+			cin >> input;
+			if(input == 'Y' || input == 'y')
+			{
+				int numOne = 1 + random(3);
+				int numTwo = 1 + random(3);
+				int numThree = 1 + random(3);
+				cout << "[" << numOne << "] " << "[" << numTwo << "] " << "[" << numThree << "]" << endl;
+				if(numOne == numTwo && numTwo == numThree && numOne == numThree)
+				{
+					if(numOne == 3)
+					{
+						tokens += 100;
+						cout << "You won! Received 100 tokens. You have " << tokens << " tokens." << endl;
+					}
+					else if(numOne == 2)
+					{
+						tokens += 50;
+						cout << "You won! Received 50 tokens. You have " << tokens << " tokens." << endl;
+					}
+					else
+					{
+						tokens += 20;
+						cout << "You won! Received 20 tokens. You have " << tokens << " tokens." << endl;
+					}
+
+				}
+				else
+				{
+					tokens -= 10;
+					cout << "You lost! You have " << tokens << " tokens." << endl;	
+				}
+			}
+		} while(input == 'Y' || input == 'y' && tokens >= 10);
+
+		cout << "" << endl;
+		cout << "Game Over! You ran out of tokens!" << endl;
+		cout << "" << endl;
+
+	return 0;
+}

@@ -1,9 +1,7 @@
 # Slot-Machine
-C++ Computer Programming Project
-Slot Machine Project I made for my class -> Introduction to Computer Science
-======================================================================
+High School project coded in C++
 
-This project was another simple project I created for my school. This was created before I learned about functions, which would have made the project much easier to code. The code is very simple, just using a do loop with some conditionals. 
+This was a simple project I created for my school. The code is very simple, using a simple loop with one main function.
 
 The application has limited functionality. The game is ran through a console screen, and the only way to play is by typing "Y" or "y" into the console. If the three "slots" are the same number, the user receives coins.
 

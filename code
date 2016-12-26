@@ -1,4 +1,5 @@
-//Ben Adamsky
+/* Copyright (c) 2016, Ben Adamsky */
+
 #include <iostream.h>
 #include <lvp\random.h>
 //Custom Randomization Class
